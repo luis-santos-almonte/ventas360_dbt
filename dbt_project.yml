@@ -36,6 +36,6 @@ models:
       +materialized: view
       snowflake_warehouse: venta360_wh
     marts:
-      +materialized: view
+      +materialized: table
       snowflake_warehouse: venta360_wh
 
