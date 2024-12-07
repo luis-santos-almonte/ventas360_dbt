@@ -9,4 +9,4 @@ WITH raw_productos AS (
         FECHA_CREACION
     FROM {{ source('raw', 'productos') }}
 )
-SELECT * FROM raw_productos;
+SELECT * FROM raw_productos

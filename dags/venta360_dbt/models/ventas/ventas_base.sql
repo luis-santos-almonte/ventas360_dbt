@@ -1,16 +1,28 @@
 WITH raw_ventas AS (
     SELECT
-        v.ID_VENTA,
-        v.ID_CLIENTE,
-        v.FECHA_VENTA,
-        v.TOTAL,
-        v.ESTADO,
-        dv.ID_PRODUCTO,
-        dv.CANTIDAD,
-        dv.PRECIO_UNITARIO,
-        dv.SUBTOTAL
-    FROM {{ source('raw', 'ventas') }} v
-    JOIN {{ source('raw', 'detalle_ventas') }} dv
-        ON v.ID_VENTA = dv.ID_VENTA
+        v.id_venta,
+        v.id_cliente,
+        v.fecha_venta,
+        v.total,
+        v.estado,
+        dv.id_producto,
+        dv.cantidad,
+        dv.precio_unitario,
+        dv.subtotal
+    FROM
+        {{ source(
+            'raw',
+            'ventas'
+        ) }}
+        v
+        JOIN {{ source(
+            'raw',
+            'detalle_ventas'
+        ) }}
+        dv
+        ON v.id_venta = dv.id_venta
 )
-SELECT * FROM raw_ventas;
+SELECT
+    *
+FROM
+    raw_ventas
