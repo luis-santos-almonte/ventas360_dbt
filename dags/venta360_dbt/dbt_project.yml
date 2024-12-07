@@ -18,7 +18,4 @@ models:
   venta360_dbt:
     staging:
       +materialized: view
-      snowflake_warehouse: venta360_wh
-    marts:
-      +materialized: table
-      snowflake_warehouse: venta360_wh
+      snowflake_warehouse: dbt_wh
