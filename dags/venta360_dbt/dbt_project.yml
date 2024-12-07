@@ -16,6 +16,5 @@ clean-targets:
 
 models:
   venta360_dbt:
-    staging:
-      +materialized: view
-      snowflake_warehouse: dbt_wh
+    +materialized: view
+    snowflake_warehouse: dbt_wh
