@@ -1,5 +1,4 @@
 SELECT
     *
 FROM
-    {{ source { 'tpch',
-    'orders' }} }
+    {{ source('tpch', 'orders') }}
