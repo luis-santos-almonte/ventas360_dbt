@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw
+    database: venta360_db
+    schema: dbt_schema
+    tables:
+      - name: clientes
+      - name: productos
+      - name: ventas
+      - name: detalle_ventas
